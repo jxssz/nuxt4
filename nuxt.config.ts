@@ -1,10 +1,25 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
-  modules: ["@nuxthub/core"],
-  compatibilityDate: "2025-07-15",
-  devtools: { enabled: true },
+  modules: ["vuetify-nuxt-module"],
+  ssr: process.env.NUXT_SSR === "true",
+  // compatibilityDate: "2025-07-15",
+  devtools: { enabled: false },
   devServer: {
     port: 3000,
-    host: "0.0.0.0",
+    // host: "0.0.0.0",
+  },
+  vuetify: {
+    moduleOptions: {
+      /* module specific options */
+    },
+    vuetifyOptions: {
+      /* vuetify options */
+      icons: {
+        defaultSet: 'mdi',
+        sets: "mdi",
+        // sets: {},
+      },
+    },
   },
 });

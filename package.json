@@ -3,8 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
+    "build": "nuxt build --dotenv .env.production",
+    "dev": "nuxt dev --dotenv .env.development",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -13,6 +13,10 @@
     "nuxt": "^4.0.3",
     "vue": "^3.5.20",
     "vue-router": "^4.5.1",
-    "@nuxthub/core": "npm:@nuxthub/core@nightly"
+    "vuetify-nuxt-module": "^0.18.7"
+  },
+  "devDependencies": {
+    "@mdi/font": "^7.4.47",
+    "@types/node": "^24.7.1"
   }
 }
