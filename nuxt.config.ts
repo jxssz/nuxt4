@@ -5,6 +5,10 @@ export default defineNuxtConfig({
     preset: "deno",
   },
   modules: ["vuetify-nuxt-module"],
+  // 添加构建配置
+  build: {
+    transpile: ["vuetify"],
+  },
   ssr: process.env.NUXT_SSR === "true",
   // compatibilityDate: "2025-07-15",
   devtools: { enabled: false },
