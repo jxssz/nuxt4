@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+  nitro: {
+    preset: "deno",
+  },
   modules: ["vuetify-nuxt-module"],
   ssr: process.env.NUXT_SSR === "true",
   // compatibilityDate: "2025-07-15",
@@ -16,7 +19,7 @@ export default defineNuxtConfig({
     vuetifyOptions: {
       /* vuetify options */
       icons: {
-        defaultSet: 'mdi',
+        defaultSet: "mdi",
         sets: "mdi",
         // sets: {},
       },
